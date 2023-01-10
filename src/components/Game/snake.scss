@@ -1,0 +1,51 @@
+@import '../../styles/variables';
+canvas{
+	background-image: url("https://assets.codepen.io/215128/snakesAndLaddersBoard.jpg");
+	border: 5px solid grey;
+	border-radius: 7px;
+	height: 500px;
+	width: 500px;
+}
+.playerYou{
+	.wrapper{
+		color: darken($p1Colour, 33%);
+	}
+	canvas{
+		border-color: $p1Colour;
+	}
+	#diceThrow{
+		background-color: $p1ColourA;
+  		background-blend-mode: multiply;
+		border-color: darken($p1Colour, 18%);
+	}
+} 
+.playerAutoBot{
+	.wrapper{
+		color: darken($p2Colour, 23%);
+	}
+	canvas{
+		border-color: $p2Colour;
+	}
+	#diceThrow{
+		background-color: $p2ColourA;
+  		background-blend-mode: multiply;
+		border-color: darken($p2Colour, 15%);
+	}
+} 
+
+#diceThrow{
+	background-image: url("https://assets.codepen.io/215128/diceSpots.png");
+	background-size: 50px;
+	border: 2px solid $lineColour;
+	border-radius: 7px;
+	cursor: pointer;
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	&.s6{ background-position: 0 0 }
+	&.s5{ background-position: 0 -50px }
+	&.s4{ background-position: 0 -100px }
+	&.s3{ background-position: 0 -150px }
+	&.s2{ background-position: 0 -200px }
+	&.s1{ background-position: 0 -250px }
+}
